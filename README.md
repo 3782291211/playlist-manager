@@ -10,6 +10,7 @@ See below for relevant screenshots.
 1. [Click here to go to the app](https://playlist-manager-omega.vercel.app/). 
 2. Once you're there, you will be redirected to Spotify's login page. 
 3. After that, you will have to authorise this app to enable it to add new playlists to your account. Don't worry, the app doesn't have access to any of your private information, just the public stuff.
+4. Once you've authorised the app, you can use it to search Spotify's music library by song/artist/album, add/remove songs to a new playlist, and save the playlist to your account.
 
 ## Application features
 - This app makes GET and POST requests to the Spotify web API using temporary access tokens acquired through a client-side authorisation workflow.
