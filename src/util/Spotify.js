@@ -1,7 +1,7 @@
 class Spotify {
     static accessToken;
     static clientID = process.env.REACT_APP_CLIENT_ID;
-    static redirectURI = "http://spotify-api-client.surge.sh";
+    static redirectURI = "https://playlist-manager-omega.vercel.app";
 
     static getAccessToken() {
         if (this.accessToken) {
