@@ -16,7 +16,7 @@ This React application links directly to your Spotify account and allows you to 
 
 ## Screenshot
 
-<img src="ssht.png" width=500>
+<img src="home.png" width=500>
 
 ## Authorisation message
 
