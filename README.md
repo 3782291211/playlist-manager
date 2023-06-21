@@ -1,46 +1,23 @@
-# Getting Started with Create React App
+# Spotify playlist manager 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Click here to go to the live app.](https://playlist-manager-omega.vercel.app/)
 
-## Available Scripts
+## What is it?
+This React application links directly to your Spotify account and allows you to search through the entire Spotify music library, discover new songs, create new playlists and save those playlists to your account.
 
-In the project directory, you can run:
+## How to use the application
+[Click here to go to the app](https://playlist-manager-omega.vercel.app/). Once you're there, you will be redirected to a Spotify page where you will have to authorise this app to enable it to add new playlists to your account (see below for a screenshot). Don't worry, the app doesn't have access to any of your private information, just the public stuff.
 
-### `npm start`
+## Application features
+- This app makes GET and POST requests to the Spotify web API using temporary access tokens.
+- Written using class components.
+- The interface allows you to cycle back and forth between different pages as well as add and remove songs to your playlist.
+- Give your new playlist a name by typing into the input box at the top of the playlist section.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Screenshot
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<img src="ssht.png" width=500>
 
-### `npm test`
+## Authorisation message
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+<img src="auth.png" width=400>
