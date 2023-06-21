@@ -1,7 +1,7 @@
 {
   "name": "spotify-api-client",
   "version": "0.1.0",
-  "homepage": "https://3782291211.github.io/playlist-manager",
+  "homepage": "https://playlist-manager-omega.vercel.app",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
