@@ -1,0 +1,56 @@
+.SearchResults {
+  width: 50%;
+  max-width: 700px;
+  height: 950px;
+  overflow-y: scroll;
+  padding: .88rem;
+  background-color: rgba(81, 71, 71, 0.333);
+  box-shadow: 0 4px 2px 2px #000000;
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+h2 {
+  margin-bottom: 5px;
+  margin-top: 4px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #6f6f6f;
+}
+
+h3 {
+  margin-top: 4px
+}
+
+p {
+  margin-bottom: 1rem
+}
+
+.Pagination {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Pagination button {
+  height: 30px;
+  width: 60px;
+  border-radius: 8px;
+}
+
+#previous {
+  margin-right: 10px
+}
+
+#previous, #next {
+  width: 70px
+}
+
+@media only screen and (max-width: 1020px) {
+  .SearchResults {
+    width: 90%;
+    margin-bottom: 2rem;
+  }
+}
