@@ -3,10 +3,10 @@
   flex-direction: column;
   align-items: center;
   padding-top: 6.94rem;
-  margin-bottom: 6.33rem;
+  margin-bottom: 5rem;
 }
 
-.SearchBar input {
+#SearchBox {
   width: 287px;
   padding: .88rem 0;
   border: 1px solid #fff;
@@ -17,7 +17,7 @@
   font-size: 1rem;
 }
 
-.SearchBar input:focus {
+#SearchBox:focus {
   outline: none;
 }
 
