@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import './PlayList.css';
 import TrackList from "../TrackList/TrackList";
 
@@ -13,14 +14,24 @@ class PlayList extends React.Component {
   }
 
   render () {
+    const playlistIsEmpty = this.props.playlistTracks.length === 0;
     return (
-      <div className="Playlist">
+      <div style={playlistIsEmpty ? {height: '7.6rem'} : {}} className="Playlist">
         <input onChange={this.handleNameChange} placeholder="Enter playlist name"/>
-        <TrackList tracks={this.props.playlistTracks} onRemove={this.props.onRemove} isRemoval={true} />
-        <button onClick={this.props.onSave} className="Playlist-save">SAVE TO SPOTIFY</button>
+        {playlistIsEmpty && <p className="empty-playlist">Added songs will appear here.</p>}
+        <TrackList tracks={this.props.playlistTracks} onRemove={this.props.onRemove} isRemoval={true}/>
+        {!playlistIsEmpty && <button onClick={this.props.onSave} className="Playlist-save">SAVE TO SPOTIFY</button>}
       </div>
     );
   }
+}
+
+PlayList.propTypes = {
+  playlistName: PropTypes.string.isRequired,
+  playlistTracks: PropTypes.array.isRequired,
+  onRemove: PropTypes.func.isRequired,
+  onSave: PropTypes.func.isRequired,
+  onNameChange: PropTypes.func.isRequired
 }
 
 export default PlayList;
