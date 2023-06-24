@@ -14,6 +14,7 @@ class App extends React.Component {
       playlistName: "random songs",
       playlistTracks: [],
       searchTerm: '',
+      noSearchResults: false,
       pagination: { total: '', previous: '', next: ''}
     };
     this.addTrack = this.addTrack.bind(this);
@@ -22,6 +23,7 @@ class App extends React.Component {
     this.savePlaylist = this.savePlaylist.bind(this);
     this.search = this.search.bind(this);
     this.handleTermChange = this.handleTermChange.bind(this);
+    this.resetSearchResults = this.resetSearchResults.bind(this);
   }
 
   componentDidMount() {
@@ -67,7 +69,8 @@ class App extends React.Component {
       }
     });
     this.setState({ 
-      searchResults, 
+      searchResults,
+      noSearchResults: searchResults.length === 0,
       pagination: { 
           total: response?.tracks.total, 
           previous: response?.tracks.previous, 
@@ -80,17 +83,21 @@ class App extends React.Component {
     this.setState({ searchTerm: e.target.value });
   }
 
+  resetSearchResults() {
+    this.setState({ searchResults: [], searchTerm: '' });
+  }
+
   render() {
     const { searchResults, playlistName, playlistTracks } = this.state;
     return (
       <div className="relative">
         <h1 className="relative">Ja<span className="highlight">mmm</span>ing</h1>
         <div className="App">
-          <SearchBar searchTerm={this.state.searchTerm} handleTermChange={this.handleTermChange} onSearch={this.search} />
+          <SearchBar searchTerm={this.state.searchTerm} handleTermChange={this.handleTermChange} onSearch={this.search} onReset={this.resetSearchResults}/>
           <Confirmation responseStatus={this.state.responseStatus}/>
           <div className="App-playlist">
-            <SearchResults searchResults={searchResults} onAdd={this.addTrack} searchTerm={this.state.searchTerm} onSearch={this.search} pagination={this.state.pagination} />
-            <PlayList playlistName={playlistName} playlistTracks={playlistTracks} onRemove={this.removeTrack} onNameChange={this.updatePlaylistName} onSave={this.savePlaylist} />
+            <SearchResults searchResults={searchResults} onAdd={this.addTrack} searchTerm={this.state.searchTerm} onSearch={this.search} pagination={this.state.pagination} noSearchResults={this.state.noSearchResults}/>
+            <PlayList playlistName={playlistName} playlistTracks={playlistTracks} onRemove={this.removeTrack} onNameChange={this.updatePlaylistName} onSave={this.savePlaylist}/>
           </div>
         </div>
       </div>
