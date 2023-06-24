@@ -24,8 +24,18 @@
   font-size: 1.55rem;
   color: #fff;
   margin-top: -5px;
-  margin-bottom: 5px;
   padding-bottom: 10px;
+}
+
+.Playlist p {
+  width: 100%;
+  text-align: left;
+  padding-top: 10px;
+  margin-bottom: 1rem
+}
+
+p.empty-playlist {
+  padding-top: 30px;
 }
 
 .Playlist-save {

@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 6.94rem;
+  padding-top: 5rem;
   margin-bottom: 5rem;
 }
 
@@ -23,8 +23,9 @@
 
 .SearchButton {
   cursor: pointer;
-  width: 8.11rem;
+  width: 7.5rem;
   padding: .77rem 0;
+  margin: 0 0.5rem;
   border-radius: 54px;
   background-color: #02187a;
   text-align: center;
@@ -33,6 +34,10 @@
   border: 0px;
   color: #fff;
   font-weight: 500;
+}
+
+.SearchBarButtons {
+  display: flex;
 }
 
 .SearchButton:hover {

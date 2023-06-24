@@ -23,7 +23,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* height: 72px; */
 }
 
 .Track-information {
@@ -31,8 +30,8 @@
 }
 
 audio {
-  margin: 10px;
-  margin-top: 0;
+  margin-bottom: 10px;
+  margin-top: -5px;
   height: 30px;
   width: 100%;
   max-width: 300px;

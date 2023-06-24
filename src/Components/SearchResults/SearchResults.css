@@ -9,6 +9,15 @@
   border-radius: 0.5rem;
 }
 
+.SearchResults p {
+  padding-top: 10px;
+  margin-bottom: 1rem
+}
+
+p.empty {
+  padding-top: 30px;
+}
+
 ::-webkit-scrollbar {
     width: 0px;
     background: transparent;
@@ -17,21 +26,18 @@
 h2 {
   margin-bottom: 5px;
   margin-top: 4px;
-  padding-bottom: 18px;
-  border-bottom: 1px solid #6f6f6f;
+  padding-bottom: 11px;
 }
 
 h3 {
+  padding-top: 5px;
   margin-top: 4px
-}
-
-p {
-  margin-bottom: 1rem
 }
 
 .Pagination {
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px solid #6f6f6f;
 }
 
 .Pagination button {
